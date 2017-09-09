@@ -88,7 +88,7 @@
 ;; (electric-indent-mode -1)
 
 ;; customize font-size
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 200)
 
 ;; customize font-family
 (set-default-font "Anonymous Pro")
@@ -112,6 +112,8 @@
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 
 (delete-selection-mode t)
+(setq auto-save-default nil)
+(setq make-backup-files nil)
 
 (require 'smartparens-config)
 (smartparens-global-mode t)
