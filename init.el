@@ -1,4 +1,4 @@
-;; Added by Package.el.  This must come before configurations of
+ ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
@@ -20,6 +20,8 @@
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
+(load-file custom-file)
+
 ;; config swiper
 (setq enable-recursive-minibuffers t)
 
@@ -28,12 +30,10 @@
 (global-set-key (kbd "<f3>") 'neotree-toggle)
 (setq neo-smart-open 1)
 ;;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-;;(setq projectile-switch-project-action 'neotree-projectile-action)
+(setq projectile-switch-project-action 'neotree-projectile-action)
 
 ;; close auto-indent
 ;; (electric-indent-mode -1)
-
-(delete-selection-mode t)
 
 ;; enter fullscreen when launch up
 (setq initial-frame-alist (quote ((fullscreen . maximized))))

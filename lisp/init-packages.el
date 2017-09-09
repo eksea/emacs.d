@@ -14,6 +14,8 @@
 			 counsel
 			 smartparens
 			 neotree
+			 nodejs-repl
+			 js2-mode
 			 all-the-icons
 			 find-file-in-project
 			 popwin
@@ -42,7 +44,27 @@
 (require 'popwin)
 (popwin-mode t)
 
+;; config neotree
+; (defun neotree-project-dir ()
+;   "Open Neotree using the git root."
+;   (interactive)
+;   (let ((project-dir (ffip-project-root))
+; 	(file-name (buffer-file-name)))
+;     (if project-dir
+; 	(progn
+; 	  (neotree-dir project-dir)
+; 	  (neotree-find file-name))
+;       (message "Could not find git project root."))))
+; (define-key map (kbd "C-c C-p") 'neotree-project-dir)
+
+
 ;; enable company
 (global-company-mode t)
+
+;; config js2-mode
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode))
+       auto-mode-alist))
 
 (provide 'init-packages)

@@ -11,4 +11,7 @@
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+;; delete selected content while input
+(delete-selection-mode t)
+
 (provide 'init-better-default)

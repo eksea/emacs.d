@@ -11,4 +11,6 @@
 ;; bind shortcut for recentf
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 
+(global-set-key (kbd "C-c p f") 'counsel-git)
+
 (provide 'init-keybindings)
