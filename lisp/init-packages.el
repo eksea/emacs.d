@@ -33,7 +33,6 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-(require 'smartparens-config)
 (smartparens-global-mode t)
 
 (ivy-mode 1)
