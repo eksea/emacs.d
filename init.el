@@ -2,50 +2,24 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(when (>= emacs-major-version 24)
-  (message "update package archives")
-  (require 'package)
-  (package-initialize)
-  (setq package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
-               ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
 
-(require 'cl)
 
-(defvar eksea/packages '(
-			 company
-			 monokai-theme
-			 go-mode
-			 racket-mode
-			 darkokai-theme
-			 swiper
-			 counsel
-			 smartparens
-			 neotree
-			 all-the-icons
-			 find-file-in-project
-			 popwin
-			 ) "Default packages")
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
 
-(setq package-selected-packages eksea/packages)
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'init-packages)
 
-(defun eksea/packages-installed-p ()
-  (loop for pkg in eksea/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
-
-(unless (eksea/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg eksea/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
+(setq ring-bell-function 'ignore)
 
 ;;(load-theme 'monokai t)
 (load-theme 'darkokai t)
 
 ;; config swiper
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
+
 (setq enable-recursive-minibuffers t)
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
@@ -54,17 +28,12 @@
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
-
 ;; config neotree
 (require 'neotree)
 (global-set-key (kbd "<f3>") 'neotree-toggle)
 (setq neo-smart-open 1)
 ;;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 ;;(setq projectile-switch-project-action 'neotree-projectile-action)
-
-;; popwin
-(require 'popwin)
-(popwin-mode t)
 
 ;; close tool bar
 (tool-bar-mode -1)
@@ -93,16 +62,13 @@
 ;; customize font-family
 (set-default-font "Anonymous Pro")
 
-;; open init file
+  ;; open init file
 (defun open-init-file()
   (interactive)
   (find-file "c:/Users/Jack/AppData/Roaming/.emacs.d/init.el"))
 
 ;; bind open-init-file to <f2>
 (global-set-key (kbd "<f2>") 'open-init-file)
-
-;; enable company
-(global-company-mode t)
 
 ;; open recently edited files
 (require 'recentf)
@@ -115,8 +81,6 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-(require 'smartparens-config)
-(smartparens-global-mode t)
 
 ;; enter fullscreen when launch up
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
