@@ -19,7 +19,15 @@
 (set-face-attribute 'default nil :height 200)
 
 ;; customize font-family
-(set-default-font "Anonymous Pro")
+;; (set-default-font "Anonymous Pro")
+;; Setting English Font
+(set-face-attribute
+ 'default nil :font "Anonymous Pro")
+;; Setting Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+		    charset
+		    (font-spec :family "SimHei")))
 
 ;;(load-theme 'monokai t)
 (load-theme 'darkokai t)

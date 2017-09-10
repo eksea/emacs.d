@@ -16,7 +16,6 @@
 			 neotree
 			 nodejs-repl
 			 js2-mode
-			 all-the-icons
 			 find-file-in-project
 			 popwin
 			 ) "Default packages")

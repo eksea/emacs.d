@@ -14,4 +14,6 @@
 ;; delete selected content while input
 (delete-selection-mode t)
 
+(setq dired-dwim-target t)
+
 (provide 'init-better-default)
