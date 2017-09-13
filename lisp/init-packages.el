@@ -68,4 +68,15 @@
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
 
+;; config swiper
+(setq enable-recursive-minibuffers t)
+
+;; config neotree
+(require 'neotree)
+(global-set-key (kbd "<f3>") 'neotree-toggle)
+(setq neo-smart-open 1)
+;;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq projectile-switch-project-action 'neotree-projectile-action)
+
+
 (provide 'init-packages)
