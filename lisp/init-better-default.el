@@ -16,4 +16,6 @@
 
 (setq dired-dwim-target t)
 
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (provide 'init-better-default)
