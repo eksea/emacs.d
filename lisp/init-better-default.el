@@ -13,6 +13,12 @@
 ;; delete selected content while input
 (delete-selection-mode t)
 
+;; close auto-indent
+;; (electric-indent-mode -1)
+
+;; enter fullscreen when launch up
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
 (setq dired-dwim-target t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -23,5 +29,22 @@
 ;;(put 'dired-find-alternate-file 'disable nil)
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+(defun occur-dwim ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+(require 'dired-x)
+(setq dired-dwim-target 1)
 
 (provide 'init-better-default)

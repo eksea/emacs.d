@@ -19,6 +19,7 @@
 			 find-file-in-project
 			 popwin
 			 helm-ag
+			 web-mode
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)
@@ -58,15 +59,17 @@
 ;       (message "Could not find git project root."))))
 ; (define-key map (kbd "C-c C-p") 'neotree-project-dir)
 
-
-;; enable company
-(global-company-mode t)
-
-;; config js2-mode
+;; config web-mode
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode))
+       '(("\\.html\\'" . web-mode))
+       '(("\\.htm\\'" . web-mode))
        auto-mode-alist))
+
+
+;; enable company
+(global-company-mode t)
 
 ;; config swiper
 (setq enable-recursive-minibuffers t)
