@@ -20,6 +20,7 @@
 			 popwin
 			 helm-ag
 			 web-mode
+			 expand-region
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)
