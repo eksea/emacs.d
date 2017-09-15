@@ -92,6 +92,10 @@
 
 (window-numbering-mode 1)
 
+;; add/delete/change surround for content
+(require 'evil-surround)
+(global-evil-surround-mode)
+
 (global-evil-leader-mode)
 (evil-leader/set-key
   "ff" 'find-file
