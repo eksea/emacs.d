@@ -6,7 +6,10 @@
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 1)
  '(evil-leader/leader "SPC")
- '(evil-want-C-u-scroll t))
+ '(evil-want-C-u-scroll t)
+ '(package-selected-packages
+   (quote
+    (window-numbering company monokai-theme go-mode racket-mode darkokai-theme swiper counsel smartparens neotree nodejs-repl js2-mode find-file-in-project popwin helm-ag web-mode expand-region evil evil-leader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

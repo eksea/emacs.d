@@ -23,6 +23,7 @@
 			 expand-region
 			 evil
 			 evil-leader
+			 window-numbering
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)
@@ -89,6 +90,8 @@
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
+(window-numbering-mode 1)
+
 (global-evil-leader-mode)
 (evil-leader/set-key
   "ff" 'find-file
@@ -103,6 +106,7 @@
   "3" 'select-window-3
   "w/" 'split-window-right
   "w-" 'split-window-below
+  "wm" 'delete-other-windows
   ":" 'counsel-M-x)
 
 (provide 'init-packages)
