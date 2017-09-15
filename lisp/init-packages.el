@@ -23,6 +23,8 @@
 			 expand-region
 			 evil
 			 evil-leader
+			 evil-surround
+			 evil-nerd-commenter
 			 window-numbering
 			 ) "Default packages")
 
@@ -96,8 +98,15 @@
 (require 'evil-surround)
 (global-evil-surround-mode)
 
+;; Emacs key bindings for commenter
+(global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
+(global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
+(global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
+(global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
+
 (global-evil-leader-mode)
 (evil-leader/set-key
+  "ci" 'evilnc-comment-or-uncomment-lines
   "ff" 'find-file
   "fr" 'recentf-open-files
   "sb" 'switch-to-buffer
