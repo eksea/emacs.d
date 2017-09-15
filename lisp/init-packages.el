@@ -109,10 +109,12 @@
   "ci" 'evilnc-comment-or-uncomment-lines
   "ff" 'find-file
   "fr" 'recentf-open-files
-  "sb" 'switch-to-buffer
+  "sk" 'switch-to-buffer
   "kf" 'kill-buffer
   "pf" 'counsel-git
   "ps" 'helm-do-ag-project-root
+  "sd" 'helm-do-ag
+  "sb" 'helm-ag-buffers
   "0" 'select-window-0
   "1" 'select-window-1
   "2" 'select-window-2
