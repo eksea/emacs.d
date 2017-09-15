@@ -11,10 +11,6 @@
 ;; bind shortcut for recentf
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 
-(global-set-key (kbd "C-c p f") 'counsel-git)
-
-(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
-
 (global-set-key (kbd "M-s i") 'counsel-imenu)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
