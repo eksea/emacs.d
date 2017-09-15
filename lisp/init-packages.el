@@ -85,6 +85,9 @@
 (setq projectile-switch-project-action 'neotree-projectile-action)
 
 (evil-mode 1)
+;; using emacs keybindings in evil-insert-state
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
 
 (global-evil-leader-mode)
 (evil-leader/set-key
