@@ -27,6 +27,7 @@
 			 evil-nerd-commenter
 			 window-numbering
 			 geiser
+			 which-key
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)
@@ -94,6 +95,8 @@
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
 (window-numbering-mode 1)
+
+(which-key-mode 1)
 
 ;; add/delete/change surround for content
 (require 'evil-surround)
