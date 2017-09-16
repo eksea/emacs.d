@@ -26,6 +26,7 @@
 			 evil-surround
 			 evil-nerd-commenter
 			 window-numbering
+			 geiser
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)
