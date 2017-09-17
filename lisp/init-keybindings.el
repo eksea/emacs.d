@@ -15,4 +15,6 @@
 
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+(global-set-key (kbd "<f5>") 'geiser-mode-switch-to-repl-and-enter)
+
 (provide 'init-keybindings)
