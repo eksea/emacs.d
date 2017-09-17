@@ -116,7 +116,7 @@
   "sk" 'switch-to-buffer
   "kf" 'kill-buffer
   "pf" 'counsel-git
-  "ps" 'helm-do-ag-project-root
+  "sg" 'helm-do-ag-project-root
   "sd" 'helm-do-ag
   "sb" 'helm-ag-buffers
   "0" 'select-window-0
