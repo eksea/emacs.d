@@ -16,7 +16,6 @@
 			 neotree
 			 nodejs-repl
 			 js2-mode
-			 find-file-in-project
 			 popwin
 			 helm-ag
 			 web-mode
