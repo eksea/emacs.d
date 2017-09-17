@@ -113,8 +113,9 @@
 
 (global-evil-leader-mode)
 (evil-leader/set-key
-  "ci" 'evilnc-comment-or-uncomment-lines
   "ff" 'find-file
+  "ss" 'swiper
+  "ci" 'evilnc-comment-or-uncomment-lines
   "fr" 'recentf-open-files
   "sk" 'switch-to-buffer
   "kf" 'kill-buffer
