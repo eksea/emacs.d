@@ -13,6 +13,7 @@
 			 swiper
 			 counsel
 			 smartparens
+			 all-the-icons
 			 neotree
 			 nodejs-repl
 			 js2-mode
@@ -85,7 +86,7 @@
 (require 'neotree)
 (global-set-key (kbd "<f3>") 'neotree-toggle)
 (setq neo-smart-open 1)
-;;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq projectile-switch-project-action 'neotree-projectile-action)
 
 (evil-mode 1)
