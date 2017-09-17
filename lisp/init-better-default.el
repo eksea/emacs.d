@@ -54,4 +54,10 @@
 (require 'dired-x)
 (setq dired-dwim-target 1)
 
+;; fix stuck when emacs show special characters
+(when (eq system-type 'windows-nt)
+  (setq gc-cons-threshold (* 512 1024 1024))
+  (setq gc-cons-percentage 0.5)
+  (run-with-idle-timer 5 t #'garbage-collect))
+
 (provide 'init-better-default)

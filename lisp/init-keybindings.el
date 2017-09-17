@@ -8,6 +8,9 @@
 ;; bind open-init-file to <f2>
 (global-set-key (kbd "<f2>") 'open-init-file)
 
+;; bind open-home to <f4>
+(global-set-key (kbd "<f4>") 'open-home)
+
 ;; bind shortcut for recentf
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 

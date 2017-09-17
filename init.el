@@ -11,6 +11,10 @@
   (interactive)
   (find-file "c:/Users/Jack/AppData/Roaming/.emacs.d/init.el"))
 
+;; open home
+(defun open-home()
+  (interactive)
+  (find-file "c:/Users/Jack/Home"))
 
 (require 'init-packages)
 (require 'init-ui)

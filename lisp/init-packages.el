@@ -107,6 +107,10 @@
 (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
 (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
 
+(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+(evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+
 (global-evil-leader-mode)
 (evil-leader/set-key
   "ci" 'evilnc-comment-or-uncomment-lines
