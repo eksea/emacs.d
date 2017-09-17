@@ -44,6 +44,13 @@
   (call-interactively 'occur))
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Hightlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+
 (require 'dired-x)
 (setq dired-dwim-target 1)
 
