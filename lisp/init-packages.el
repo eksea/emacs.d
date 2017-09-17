@@ -118,18 +118,18 @@
   "ss" 'swiper
   "ci" 'evilnc-comment-or-uncomment-lines
   "fr" 'recentf-open-files
-  "sk" 'switch-to-buffer
+  "bf" 'switch-to-buffer
   "kf" 'kill-buffer
   "pf" 'counsel-git
   "sg" 'helm-do-ag-project-root
   "sd" 'helm-do-ag
   "sb" 'helm-ag-buffers
-  "0" 'select-window-0
   "1" 'select-window-1
   "2" 'select-window-2
   "3" 'select-window-3
-  "w/" 'split-window-right
-  "w-" 'split-window-below
+  "4" 'select-window-4
+  "wh" 'split-window-right
+  "wv" 'split-window-below
   "wm" 'delete-other-windows
   ":" 'counsel-M-x)
 
