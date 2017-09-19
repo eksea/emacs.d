@@ -21,6 +21,7 @@
 			 helm-ag
 			 web-mode
 			 expand-region
+			 exec-path-from-shell
 			 evil
 			 evil-leader
 			 evil-surround
@@ -96,6 +97,10 @@
 
 (window-numbering-mode 1)
 
+;; Find Executable Path on OS X
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 (which-key-mode 1)
 
 ;; add/delete/change surround for content
@@ -115,12 +120,13 @@
 (global-evil-leader-mode)
 (evil-leader/set-key
   "ff" 'find-file
+  "fj" 'counsel-file-jump
   "ss" 'swiper
+  "cg" 'counsel-git
   "ci" 'evilnc-comment-or-uncomment-lines
   "fr" 'recentf-open-files
   "bf" 'switch-to-buffer
   "kf" 'kill-buffer
-  "pf" 'counsel-git
   "sg" 'helm-do-ag-project-root
   "sd" 'helm-do-ag
   "sb" 'helm-ag-buffers
