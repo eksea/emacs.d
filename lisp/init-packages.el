@@ -17,6 +17,7 @@
 			 neotree
 			 nodejs-repl
 			 js2-mode
+			 cmake-mode
 			 popwin
 			 helm-ag
 			 web-mode
@@ -29,6 +30,7 @@
 			 window-numbering
 			 geiser
 			 which-key
+			 fzf
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)

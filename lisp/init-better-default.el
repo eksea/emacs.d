@@ -54,6 +54,9 @@
 (require 'dired-x)
 (setq dired-dwim-target 1)
 
+;; UTF-8 as default encoding
+(set-language-environment "UTF-8")
+
 ;; fix stuck when emacs show special characters
 (when (eq system-type 'windows-nt)
   (setq gc-cons-threshold (* 512 1024 1024))
