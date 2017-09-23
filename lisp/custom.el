@@ -11,7 +11,7 @@
  '(neo-window-fixed-size nil)
  '(package-selected-packages
    (quote
-    (exec-path-from-shell all-the-icons which-key geiser evil-nerd-commenter evil-surround window-numbering company monokai-theme go-mode racket-mode darkokai-theme swiper counsel smartparens neotree nodejs-repl js2-mode popwin helm-ag web-mode expand-region evil evil-leader))))
+    (json-mode exec-path-from-shell all-the-icons which-key geiser evil-nerd-commenter evil-surround window-numbering company monokai-theme go-mode racket-mode darkokai-theme swiper counsel smartparens neotree nodejs-repl js2-mode popwin helm-ag web-mode expand-region evil evil-leader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

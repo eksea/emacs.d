@@ -21,6 +21,7 @@
 			 popwin
 			 helm-ag
 			 web-mode
+			 json-mode
 			 expand-region
 			 exec-path-from-shell
 			 evil
@@ -127,7 +128,7 @@
   "cg" 'counsel-git
   "ci" 'evilnc-comment-or-uncomment-lines
   "fr" 'recentf-open-files
-  "bf" 'switch-to-buffer
+  "sf" 'switch-to-buffer
   "kf" 'kill-buffer
   "sg" 'helm-do-ag-project-root
   "sd" 'helm-do-ag
