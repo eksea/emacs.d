@@ -9,6 +9,7 @@
  '(evil-want-C-u-scroll t)
  '(neo-autorefresh t)
  '(neo-window-fixed-size nil)
+ '(org-export-with-sub-superscripts nil)
  '(package-selected-packages
    (quote
     (json-mode exec-path-from-shell all-the-icons which-key geiser evil-nerd-commenter evil-surround window-numbering company monokai-theme go-mode racket-mode darkokai-theme swiper counsel smartparens neotree nodejs-repl js2-mode popwin helm-ag web-mode expand-region evil evil-leader))))
