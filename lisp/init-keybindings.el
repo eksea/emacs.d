@@ -20,6 +20,8 @@
 
 (global-set-key (kbd "<f5>") 'geiser-mode-switch-to-repl-and-enter)
 
+(global-set-key (kbd "C-,") 'ggtags-find-tag-dwim)
+
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)
   (define-key company-active-map (kbd "M-p") nil)

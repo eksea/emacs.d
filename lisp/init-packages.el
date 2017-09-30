@@ -122,6 +122,7 @@
 	  (lambda ()
 	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
 	      (ggtags-mode 1))))
+(setq-local imenu-create-index-function #'ggtags-build-imenu-index)
 
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
@@ -149,6 +150,8 @@
   "wm" 'delete-other-windows
   "gt" 'ggtags-find-tag-dwim
   "gr" 'ggtags-find-reference
+  "gf" 'ggtags-find-file
+  "i" 'imenu
   ":" 'counsel-M-x)
 
 (provide 'init-packages)
