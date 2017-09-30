@@ -57,17 +57,10 @@
 ;; UTF-8 as default encoding
 (set-language-environment "UTF-8")
 
-
-;;(global-whitespace-mode t)
-;; (custom-set-variables
-;;  '(whitespace-display-mappings
-;;    '((space-mark 32 [183]
-;;       [46])
-;;      (space-mark 160 [164]
-;;       [95])
-;;      ;; (newline-mark 10 [36 10])
-;;      (tab-mark 9 [187 9]
-;;       [92 9]))))
+;;(global-whitespace-mode t) (custom-set-variables
+;; '(whitespace-display-mappings '((space-mark 32 [183] [46])
+;; (space-mark 160 [164] [95]) ;; (newline-mark 10 [36 10]) (tab-mark
+;; 9 [187 9] [92 9]))))
 
 ;; fix stuck when emacs show special characters
 (when (eq system-type 'windows-nt)

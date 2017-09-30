@@ -30,6 +30,7 @@
 			 evil-nerd-commenter
 			 window-numbering
 			 geiser
+			 ggtags
 			 which-key
 			 fzf
 			 ) "Default packages")
@@ -116,6 +117,12 @@
 (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
 (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
 
+;; config ggtags
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+	      (ggtags-mode 1))))
+
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
@@ -140,6 +147,8 @@
   "wh" 'split-window-right
   "wv" 'split-window-below
   "wm" 'delete-other-windows
+  "gt" 'ggtags-find-tag-dwim
+  "gr" 'ggtags-find-reference
   ":" 'counsel-M-x)
 
 (provide 'init-packages)
