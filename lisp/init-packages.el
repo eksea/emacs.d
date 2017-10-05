@@ -13,12 +13,14 @@
 			 swiper
 			 counsel
 			 smartparens
+			 spaceline
 			 all-the-icons
 			 neotree
 			 nodejs-repl
 			 js2-mode
 			 cmake-mode
 			 popwin
+			 ;; powerline
 			 helm-ag
 			 web-mode
 			 json-mode
@@ -59,6 +61,15 @@
 (require 'popwin)
 (popwin-mode t)
 
+;; (require 'powerline)
+;; (powerline-default-theme)
+
+(window-numbering-mode 1)
+
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
+(setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+
 ;; config neotree
 ; (defun neotree-project-dir ()
 ;   "Open Neotree using the git root."
@@ -98,8 +109,6 @@
 ;; using emacs keybindings in evil-insert-state
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
-
-(window-numbering-mode 1)
 
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))
