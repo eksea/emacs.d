@@ -23,6 +23,7 @@
 			 ;; powerline
 			 helm-ag
 			 web-mode
+			 qml-mode
 			 json-mode
 			 expand-region
 			 exec-path-from-shell
@@ -136,6 +137,19 @@
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+
+;; config qml-mode
+(autoload 'qml-mode "qml-mode" "Editing Qt Declarative." t)
+(add-to-list 'auto-mode-alist '("\\.qml$" . qml-mode))
+
+;; Config HideShow
+(load-library "hideshow")
+(global-set-key (kbd "C-c C-c") 'hs-toggle-hiding)
+(add-hook 'c-mode-hook 'hs-minor-mode)
+(add-hook 'c++-mode-hook 'hs-minor-mode)
+(add-hook 'lisp-mode-hook 'hs-minor-mode)
+(add-hook 'qml-mode-hook 'hs-minor-mode)
+(add-hook 'js-mode-hook 'hs-minor-mode)
 
 (global-evil-leader-mode)
 (evil-leader/set-key
