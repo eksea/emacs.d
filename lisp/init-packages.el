@@ -3,6 +3,9 @@
 (when (>= emacs-major-version 24)
   (setq package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
                ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+;; (when (>= emacs-major-version 24)
+;;   (setq package-archives '(("gnu" . "http://melpa.org/gnu/")
+;;                ("melpa" . "http://melpa.org/melpa/"))))
 
 (defvar eksea/packages '(
 			 company
@@ -36,6 +39,8 @@
 			 ggtags
 			 which-key
 			 fzf
+			 irony
+			 company-irony
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)
@@ -150,6 +155,26 @@
 (add-hook 'lisp-mode-hook 'hs-minor-mode)
 (add-hook 'qml-mode-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook 'hs-minor-mode)
+
+;; Config irony
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+;; Windows performance tweaks
+;;
+(when (boundp 'w32-pipe-read-delay)
+(setq w32-pipe-read-delay 0))
+;; Set the buffer size to 64K on Windows (from the original 4K)
+(when (boundp 'w32-pipe-buffer-size)
+(setq irony-server-w32-pipe-buffer-size (* 64 1024)))
+
+(setq company-idle-delay 0)
+
+(setenv "PATH" (concat
+                "/c/msys64/usr/bin" ":"
+                "/c/msys64/mingw64/bin" ":"
+                (getenv "PATH")))
 
 (global-evil-leader-mode)
 (evil-leader/set-key
