@@ -32,6 +32,7 @@
 ;;(load-theme 'monokai t)
 ;; (load-theme 'darkokai t)
 (require 'moe-theme)
+(moe-dark)
 (moe-theme-set-color 'cyan)
 
 (provide 'init-ui)

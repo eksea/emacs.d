@@ -21,6 +21,7 @@
 			 all-the-icons
 			 neotree
 			 nodejs-repl
+			 imenu-anywhere
 			 js2-mode
 			 cmake-mode
 			 popwin
@@ -200,6 +201,8 @@
   "gt" 'ggtags-find-tag-dwim
   "gr" 'ggtags-find-reference
   "gf" 'ggtags-find-file
+  "gd" 'ggtags-find-definition
+  "go" 'ff-find-other-file
   "i" 'imenu
   ":" 'counsel-M-x)
 
