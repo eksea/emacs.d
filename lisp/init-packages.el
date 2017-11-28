@@ -12,7 +12,8 @@
 			 monokai-theme
 			 go-mode
 			 racket-mode
-			 darkokai-theme
+			 ;; darkokai-theme
+			 moe-theme
 			 swiper
 			 counsel
 			 smartparens

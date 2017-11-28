@@ -16,7 +16,7 @@
 (global-hl-line-mode t)
 
 ;; customize font-size
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 140)
 
 ;; customize font-family
 ;; (set-default-font "Anonymous Pro")
@@ -30,6 +30,8 @@
 		    (font-spec :family "SimHei")))
 
 ;;(load-theme 'monokai t)
-(load-theme 'darkokai t)
+;; (load-theme 'darkokai t)
+(require 'moe-theme)
+(moe-theme-set-color 'cyan)
 
 (provide 'init-ui)
