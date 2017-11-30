@@ -54,6 +54,18 @@
 (require 'dired-x)
 (setq dired-dwim-target 1)
 
+;; Open a temporary buffer
+(setq initial-major-mode (quote text-mode))
+(defun lorem-new-empty-buffer ()
+  (interactive)
+  (let (($buf (generate-new-buffer "untitled")))
+    (switch-to-buffer $buf)
+    (funcall initial-major-mode)
+    (setq buffer-offer-save t)
+    $buf
+    ))
+(global-set-key (kbd "C-c n") 'lorem-new-empty-buffer)
+
 ;; UTF-8 as default encoding
 (set-language-environment "UTF-8")
 

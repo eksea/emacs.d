@@ -198,6 +198,7 @@
   "wh" 'split-window-right
   "wv" 'split-window-below
   "wm" 'delete-other-windows
+  "gg" 'ggtags-find-tag-regexp
   "gt" 'ggtags-find-tag-dwim
   "gr" 'ggtags-find-reference
   "gf" 'ggtags-find-file
