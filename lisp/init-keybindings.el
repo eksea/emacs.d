@@ -22,6 +22,10 @@
 
 (global-set-key (kbd "C-,") 'ggtags-find-tag-dwim)
 
+(global-set-key (kbd "C-c C-f") 'ggtags-find-other-symbol)
+(global-set-key (kbd "S-<down-mouse-1>") 'ignore)
+(global-set-key (kbd "S-<mouse-1>") 'ggtags-find-tag-mouse)
+
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)
   (define-key company-active-map (kbd "M-p") nil)

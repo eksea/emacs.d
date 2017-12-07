@@ -16,7 +16,7 @@
 (global-hl-line-mode t)
 
 ;; customize font-size
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 120)
 
 ;; customize font-family
 ;; (set-default-font "Anonymous Pro")
