@@ -17,7 +17,7 @@
 			 swiper
 			 counsel
 			 smartparens
-			 spaceline
+			 ;; spaceline
 			 all-the-icons
 			 neotree
 			 nodejs-repl
@@ -74,9 +74,9 @@
 
 (window-numbering-mode 1)
 
-(require 'spaceline-config)
-(spaceline-spacemacs-theme)
-(setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+;; (require 'spaceline-config)
+;; (spaceline-spacemacs-theme)
+;; (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
 
 ;; config neotree
 ; (defun neotree-project-dir ()
