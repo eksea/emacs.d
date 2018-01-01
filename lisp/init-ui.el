@@ -1,6 +1,8 @@
 ;; close tool bar
 (tool-bar-mode -1)
 
+(menu-bar-mode -1)
+
 ;; close scroll bar
 (scroll-bar-mode -1)
 
@@ -16,7 +18,7 @@
 (global-hl-line-mode t)
 
 ;; customize font-size
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 130)
 
 ;; customize font-family
 ;; (set-default-font "Anonymous Pro")
