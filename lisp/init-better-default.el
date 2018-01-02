@@ -8,6 +8,9 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 26)
 
+(require 'whitespace)
+(global-whitespace-mode 1)
+
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
