@@ -8,6 +8,10 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 26)
 
+;; set tab to space
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+
 (require 'whitespace)
 (global-whitespace-mode 1)
 
