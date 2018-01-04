@@ -15,7 +15,7 @@
     (imenu-anywhere moe-theme company-irony irony qml-mode spaceline ggtags htmlize json-mode exec-path-from-shell all-the-icons which-key geiser evil-nerd-commenter evil-surround window-numbering company monokai-theme go-mode racket-mode darkokai-theme swiper counsel smartparens neotree nodejs-repl js2-mode popwin helm-ag web-mode expand-region evil evil-leader)))
  '(whitespace-style
    (quote
-    (face trailing tabs spaces lines newline empty space-after-tab space-before-tab space-mark))))
+    (face trailing tabs spaces lines newline empty space-mark))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
