@@ -43,6 +43,7 @@
 			 fzf
 			 irony
 			 company-irony
+                         geiser
 			 ) "Default packages")
 
 (setq package-selected-packages eksea/packages)
@@ -60,7 +61,7 @@
       (package-install pkg))))
 
 (smartparens-global-mode t)
-(sp-local-pair '(emacs-lisp-mode, lisp-interaction-mode) "'" nil :actions nil)
+(sp-local-pair '(geiser-repl-mode scheme-mode emacs-lisp-mode, lisp-interaction-mode) "'" nil :actions nil)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)

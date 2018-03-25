@@ -19,6 +19,8 @@
 (setq make-backup-files nil)
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+(add-hook 'scheme-mode-hook 'show-paren-mode)
+(add-hook 'geiser-repl-mode-hook 'show-paren-mode)
 
 ;; delete selected content while input
 (delete-selection-mode t)

@@ -18,13 +18,13 @@
 (global-hl-line-mode t)
 
 ;; customize font-size
-(set-face-attribute 'default nil :height 130)
+(set-face-attribute 'default nil :height 140)
 
 ;; customize font-family
 ;; (set-default-font "Anonymous Pro")
 ;; Setting English Font
 (set-face-attribute
- 'default nil :font "Anonymous Pro")
+ 'default nil :font "Inconsolata")
 ;; Setting Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)

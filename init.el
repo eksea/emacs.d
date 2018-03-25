@@ -9,12 +9,12 @@
 ;; open init file
 (defun open-init-file()
   (interactive)
-  (find-file "c:/Users/Jack/AppData/Roaming/.emacs.d/init.el"))
+  (find-file "~/.emacs.d/init.el"))
 
 ;; open home
 (defun open-home()
   (interactive)
-  (find-file "c:/Users/Jack/Home"))
+  (find-file "~"))
 
 (require 'init-packages)
 (require 'init-ui)
